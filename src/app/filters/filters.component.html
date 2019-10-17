@@ -1,11 +1,20 @@
 <div style="text-align: left;">
-  <li *ngFor="let category of categories" style="list-style:none; font-weight: 600;">
-    {{category.toUpperCase()}}
-    <div *ngFor="let item of items">
-      <div *ngIf="category.substring(0,3).toUpperCase() == item.category.substring(0,3).toUpperCase()" style="font-weight: 400;">
-        <input type="checkbox" id="{{item.name}}" checked>
-        {{item.name.toUpperCase()}}
-      </div>
+  <mat-accordion>
+    <div *ngFor="let category of categories" style="font-weight: 600;">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{category.toUpperCase()}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div *ngFor="let item of items">
+          <div *ngIf="category.substring(0,3).toUpperCase() == item.category.substring(0,3).toUpperCase()"
+            style="font-weight: 400;">
+            <input type="checkbox" id="{{item.name}}" checked>
+            {{item.name.toUpperCase()}}
+          </div>
+        </div>
+      </mat-expansion-panel>
     </div>
-  </li>
+  </mat-accordion>
 </div>
