@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-export class Food{
+export class Item{
   category:String;
   type:String;
   name:String;
@@ -21,13 +21,13 @@ export class Food{
 })
 
 export class FiltersComponent implements OnInit {
-  foods:Array<Food>;
+  foods:Array<Item>;
   categories: Array<String>;
   constructor() {
     this.categories = ['Food', 'Toys'];
     this.foods = [];
-    let food1 = new Food('solid','dinner', 1.75, 'purina', 'food');
-    let food2 = new Food('wet','chicken & rice', 1.75, 'purina', 'food');
+    let food1 = new Item('solid','dinner', 1.75, 'purina', 'food');
+    let food2 = new Item('wet','chicken & rice', 1.75, 'purina', 'food');
     
     Array.prototype.push.apply(this.foods, [food1,food2])
     console.log(this.foods);
