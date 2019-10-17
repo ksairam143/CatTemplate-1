@@ -1,5 +1,11 @@
 <div style="text-align: left;">
-  <li *ngFor="let category of categories" style="list-style:none;">
-    {{category}}
+  <li *ngFor="let category of categories" style="list-style:none; font-weight: 600;">
+    {{category.toUpperCase()}}
+    <div *ngFor="let item of items">
+      <div *ngIf="category.substring(0,3).toUpperCase() == item.category.substring(0,3).toUpperCase()" style="font-weight: 400;">
+        <input type="checkbox" id="{{item.name}}">
+        {{item.name.toUpperCase()}}
+      </div>
+    </div>
   </li>
 </div>

@@ -21,20 +21,17 @@ export class Item{
 })
 
 export class FiltersComponent implements OnInit {
-  foods: Array<Item> = [];
-  toys: Array<Item> = [];
+  items: Array<Item> = [];
   categories: Array<String>;
   constructor() {
     this.categories = ['Food', 'Toys'];
-    let food1 = new Item('solid','dinner', 1.75, 'purina', 'food');
+    let food1 = new Item('solid','quail & pumpkin', 1.75, 'Solid Gold', 'food');
     let food2 = new Item('wet','chicken & rice', 2.39, 'purina', 'food');
     let toy1 = new Item('plush','Happy Emoji', 5.75, 'toyco', 'toy');
     let toy2 = new Item('electronic','laser pointer', 9.95, 'laserco', 'toy');
     let toy3 = new Item('game','feather teather', 3.95, 'tyco', 'toy');
-    Array.prototype.push.apply(this.foods, [food1,food2]);
-    Array.prototype.push.apply(this.toys, [toy1,toy2, toy3]);
-    console.log(this.foods);
-    console.log(this.toys);
+    Array.prototype.push.apply(this.items, [food1,food2,toy1,toy2, toy3]);
+    console.log(this.items);
   }
 
   ngOnInit() {
