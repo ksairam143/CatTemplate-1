@@ -20,7 +20,7 @@ export class CenterAccordionComponent implements OnInit {
 
   ngOnInit() {
     this.myJson.forEach(item => {
-      let tempItem = new Item(item['type'], item['name'], item['price'], item['mfg'], item['category'], item['active']);
+      let tempItem = new Item(item['type'], item['name'], item['price'], item['mfg'], item['category'], item['active'], item['id']);
       this.items.push(tempItem);
     });
     this._filterService.filterBehaviorSubject.subscribe(filters => {

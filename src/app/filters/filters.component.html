@@ -10,7 +10,7 @@
         <div *ngFor="let item of items">
           <div *ngIf="category.substring(0,3).toUpperCase() == item.category.substring(0,3).toUpperCase()"
             style="font-weight: 400;">
-            <input type="checkbox" id="{{item.name}}" checked (click)="change(item.name)">
+            <input type="checkbox" id="{{item.name}}" checked (click)="change(item.id)">
             {{item.name.toUpperCase()}}
           </div>
         </div>

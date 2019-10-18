@@ -26,7 +26,7 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit() {
     this.myJson.forEach(item => {
-      let tempItem = new Item(item['type'], item['name'], item['price'], item['mfg'], item['category'], item['active']);
+      let tempItem = new Item(item['type'], item['name'], item['price'], item['mfg'], item['category'], item['active'], item['id']);
       this.items.push(tempItem);
     });
   }
@@ -34,7 +34,7 @@ export class FiltersComponent implements OnInit {
     let filterItems: Array<Item> = [];
     console.log(item);
     this.items.forEach(myItem => {
-      if(item == myItem.name){
+      if(item == String(myItem.id)){
         myItem.active = !myItem.active; 
         console.log('!myItem.active: ' + !myItem.active);
       }
