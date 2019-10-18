@@ -10,6 +10,10 @@ import { CenterAccordionComponent } from './center-accordion/center-accordion.co
 import { LeftTreeComponent } from './left-tree/left-tree.component';
 import { RightColumnComponent } from './right-column/right-column.component';
 import { FiltersComponent } from './filters/filters.component';
+import { DataService } from './services/data.service';
+
+import { Item } from './classes/item';
+import { FiltersService } from './services/filters.service';
 
 const material = [MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule
   , MatExpansionModule, MatTreeModule, MatIconModule, MatProgressBarModule ];
@@ -28,7 +32,7 @@ const material = [MatButtonModule, MatFormFieldModule, MatInputModule, MatRipple
     BrowserAnimationsModule,
     ...material
   ],
-  providers: [],
+  providers: [DataService, FiltersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
