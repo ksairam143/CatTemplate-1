@@ -14,6 +14,7 @@ import { DataService } from './services/data.service';
 
 import { Item } from './classes/item';
 import { FiltersService } from './services/filters.service';
+import { AddItemsComponent } from './add-items/add-items.component';
 
 const material = [MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule
   , MatExpansionModule, MatTreeModule, MatIconModule, MatProgressBarModule ];
@@ -24,7 +25,8 @@ const material = [MatButtonModule, MatFormFieldModule, MatInputModule, MatRipple
     CenterAccordionComponent,
     LeftTreeComponent,
     RightColumnComponent,
-    FiltersComponent
+    FiltersComponent,
+    AddItemsComponent
   ],
   imports: [
     BrowserModule,
